@@ -13,8 +13,8 @@
 		"url": "git+https://github.com/mnichangxin/blog-web.git"
 	},
 	"keywords": [
-		"vue",
-		"blog"
+		"blog",
+		"web"
 	],
 	"author": "lichangxin",
 	"license": "MIT",
