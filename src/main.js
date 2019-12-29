@@ -6,7 +6,7 @@ import '@styles/app.css'
 
 Vue.use(VueRouter)
 
-new Vue({
+new Vue({ // eslint-disable-line no-new
     el: '#app',
     router: new VueRouter({
         // routes: [
