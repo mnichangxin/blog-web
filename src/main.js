@@ -1,10 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Container from './components/Container.vue'
-
-import './assets/style/reset.css'
-import './assets/style/app.css'
+import App from '@pages/App.vue'
+import '@styles/app.css'
 
 Vue.use(VueRouter)
 
@@ -22,5 +20,5 @@ new Vue({
         //     }
         // ]
     }),
-    render: h => h(Container)
+    render: h => h(App)
 })

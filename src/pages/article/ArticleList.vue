@@ -1,21 +1,46 @@
-<!-- 文章列表组件 -->
-
 <template>
     <ul class="article-list">
-        <Article v-for="(article, index) in article_list" v-bind:key="index" v-bind:article="article"></Article>
+        <li class="article"
+            v-for="(article, index) in article_list" 
+            :key="index" 
+            :article="article">
+            <div class="article-top">
+                <div class="article-title">{{ article.title }}</div>
+                <div class="article-date">
+                    <img class="article-date-icon" v-bind:src="date_icon_src" /> 
+                    <span class="article-date-text">{{ article.date }}</span>
+                </div>
+            </div>
+            <div class="article-introduction">
+                <span class="article-introduction-text">{{ article.introduction }}</span>
+                <span class="article-introduction-split"></span>
+            </div>
+            <div class="article-bottom">
+                <div class="article-category">
+                    <img class="article-category-icon" v-bind:src="category_icon_src" /> 
+                    <span class="article-category-text">{{ article.category }}</span>
+                </div>
+                <ul class="article-tags">
+                    <img class="article-tag-icon" v-bind:src="tag_icon_src" />
+                    <li class="article-tag" v-for="(tag, index) in article.tags" v-bind:key="index">{{ tag }}</li>
+                </ul>
+            </div>
+        </li>
     </ul>
 </template>
 
 <script>
-    import Article from './Article.vue'
+    import date_icon_src from '@assets/icon/date.png'
+    import category_icon_src from '@assets/icon/category.png'
+    import tag_icon_src from '@assets/icon/tag.png'
 
     export default {
         name: 'ArticleList',
-        components: {
-            Article   
-        },
         data() {
             return {
+                date_icon_src: date_icon_src,
+                category_icon_src: category_icon_src,
+                tag_icon_src: tag_icon_src,
                 article_list: [
                     {
                         title: '文章标题',

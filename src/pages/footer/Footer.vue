@@ -1,5 +1,3 @@
-<!-- 页脚组件 -->
-
 <template>
     <footer class="footer">
         本站由&nbsp;<a href=".">浮生若梦</a>&nbsp;纯手工打造；

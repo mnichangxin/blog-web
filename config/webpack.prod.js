@@ -61,7 +61,7 @@ module.exports = merge(base, {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../src/tpl/index.tpl')
+            template: path.resolve(__dirname, '../src/webapp/index.tpl')
         }),
         new webpack.HashedModuleIdsPlugin()
     ]

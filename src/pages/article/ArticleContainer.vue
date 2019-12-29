@@ -1,18 +1,16 @@
-<!-- 右侧主展示组件 -->
-
 <template>
-    <div class="main-section">
-        <ArticleList></ArticleList>
-        <Footer></Footer>
+    <div class="article-container">
+        <ArticleList />
+        <Footer />
     </div>
 </template>
 
 <script>
     import ArticleList from './ArticleList.vue'
-    import Footer from './Footer.vue'
+    import Footer from '@pages/footer/Footer.vue'
 
     export default {
-        name: 'MainSection',
+        name: 'ArticleContainer',
         components: {
             ArticleList,
             Footer

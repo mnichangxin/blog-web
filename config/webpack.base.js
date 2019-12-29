@@ -4,13 +4,23 @@
 
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const resolve = dir => path.resolve(__dirname, dir)
 
 module.exports = {
     entry: {
-        app: path.resolve(__dirname, '../src/main.js')
+        app: resolve('../src/main.js')
     },
     output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: resolve('../dist'),
+    },
+    resolve: {
+        alias: {
+            '@': resolve('../src'),
+            '@components': resolve('../src/components'),
+            '@pages': resolve('../src/pages'),
+            '@styles': resolve('../src/styles'),
+            '@assets': resolve('../src/assets')
+        }
     },
     optimization: {
         splitChunks: {
