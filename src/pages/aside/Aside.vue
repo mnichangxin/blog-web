@@ -1,16 +1,30 @@
 <template>
-    <div class="aside nav">
+    <div class="aside">
         <div class="aside-top">
-            <div class="avatar">
-                <img v-bind:src="src_avatar" class="avatar-img" />
+            <div class="aside-avatar">
+                <img v-bind:src="src_avatar" class="aside-avatar-img" />
             </div>
         </div>
         <div class="aside-bottom">
             <ul class="aside-text">
-                <p class="nickname">浮生若梦</p>
-                <p class="feature">浮生若梦，稍纵即逝......</p>
+                <li class="aside-text-nickname">Shawn</li>
+                <li class="aside-text-feature">一个无聊的人的小站</li>
             </ul>
-            <ul class="aside-category">
+            <ul class="aside-menu">
+                <li>
+                    <a><i class="fa fa-home"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa fa-home"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa fa-home"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa fa-home"></i></a>
+                </li>
+            </ul>
+            <!-- <ul class="aside-category">
                 <li class="aside-category-item" v-for="(item, index) in category" v-bind:key="index">{{ item }}</li>
             </ul>
             <ul class="aside-link">
@@ -19,7 +33,7 @@
                         <img class="aside-link-item-img" v-bind:src="item.src" />
                     </a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </div>
 </template>

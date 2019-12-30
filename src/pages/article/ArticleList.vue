@@ -5,7 +5,9 @@
             :key="index"
             :article="article">
             <div class="article-top">
-                <div class="article-title">{{ article.title }}</div>
+                <div class="article-title">
+                    <a>{{ article.title }}</a>
+                </div>
                 <div class="article-date">
                     <img class="article-date-icon" v-bind:src="date_icon_src" />
                     <span class="article-date-text">{{ article.date }}</span>
