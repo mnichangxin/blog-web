@@ -12,28 +12,30 @@
             </ul>
             <ul class="aside-menu">
                 <li>
-                    <a><i class="fa fa-home"></i></a>
+                    <a title="首页"><i class="fa fa-home"></i></a>
                 </li>
                 <li>
                     <a><i class="fa fa-home"></i></a>
                 </li>
                 <li>
-                    <a><i class="fa fa-home"></i></a>
+                    <a><i class="fa fa-tags"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa fa-photo"></i></a>
+                </li>
+                <li>
+                    <a title="首页"><i class="fa fa-home"></i></a>
                 </li>
                 <li>
                     <a><i class="fa fa-home"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa fa-tags"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa fa-photo"></i></a>
                 </li>
             </ul>
-            <!-- <ul class="aside-category">
-                <li class="aside-category-item" v-for="(item, index) in category" v-bind:key="index">{{ item }}</li>
-            </ul>
-            <ul class="aside-link">
-                <li class="aside-link-item" v-for="(item, index) in links" v-bind:key="index">
-                    <a class="aside-link-item-src" v-bind:href="item.href" target="_blank">
-                        <img class="aside-link-item-img" v-bind:src="item.src" />
-                    </a>
-                </li>
-            </ul> -->
         </div>
     </div>
 </template>
