@@ -2,8 +2,8 @@
     <div class="aside nav">
         <div class="aside-top">
             <div class="avatar">
-                <img v-bind:src="src_avatar" class="avatar-img" />    
-            </div> 
+                <img v-bind:src="src_avatar" class="avatar-img" />
+            </div>
         </div>
         <div class="aside-bottom">
             <ul class="aside-text">
@@ -34,7 +34,7 @@
 
     export default {
         name: 'Aside',
-        data() {
+        data () {
             return {
                 src_avatar: src_avatar,
                 category: [
@@ -71,4 +71,3 @@
         }
     }
 </script>
-

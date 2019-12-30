@@ -16,13 +16,7 @@
         "promise"
     ],
     "rules": {
-        "indent": "off"
-    },
-    // "overrides": [{
-    //     "files": ["*.vue"],
-    //     "rules": {
-    //         "indent": "off",
-    //         "vue/script-indent": ["error", 4, { "baseIndent": 4 }]
-    //     }
-    // }]
+        "indent": "off",
+        "camelcase": "off"
+    }
 }

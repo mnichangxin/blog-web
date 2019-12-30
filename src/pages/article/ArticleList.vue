@@ -1,13 +1,13 @@
 <template>
     <ul class="article-list">
         <li class="article"
-            v-for="(article, index) in article_list" 
-            :key="index" 
+            v-for="(article, index) in article_list"
+            :key="index"
             :article="article">
             <div class="article-top">
                 <div class="article-title">{{ article.title }}</div>
                 <div class="article-date">
-                    <img class="article-date-icon" v-bind:src="date_icon_src" /> 
+                    <img class="article-date-icon" v-bind:src="date_icon_src" />
                     <span class="article-date-text">{{ article.date }}</span>
                 </div>
             </div>
@@ -17,7 +17,7 @@
             </div>
             <div class="article-bottom">
                 <div class="article-category">
-                    <img class="article-category-icon" v-bind:src="category_icon_src" /> 
+                    <img class="article-category-icon" v-bind:src="category_icon_src" />
                     <span class="article-category-text">{{ article.category }}</span>
                 </div>
                 <ul class="article-tags">
@@ -36,7 +36,7 @@
 
     export default {
         name: 'ArticleList',
-        data() {
+        data () {
             return {
                 date_icon_src: date_icon_src,
                 category_icon_src: category_icon_src,
