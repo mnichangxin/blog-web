@@ -4,6 +4,7 @@
  * adapt big screen
  */
 
+ @import url('common/index.css');
  @import url('aside/aside.css');
  @import url('article/article.css');
  @import url('footer/footer.css');

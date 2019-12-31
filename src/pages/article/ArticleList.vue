@@ -9,8 +9,8 @@
                     <a>{{ article.title }}</a>
                 </div>
                 <div class="article-date">
-                    <img class="article-date-icon" v-bind:src="date_icon_src" />
-                    <span class="article-date-text">{{ article.date }}</span>
+                    <span class="article-date-icon"><i class="fa fa-calendar"></i></span>
+                    <div class="article-date-text">{{ article.date }}</div>
                 </div>
             </div>
             <div class="article-introduction">
@@ -19,34 +19,31 @@
             </div>
             <div class="article-bottom">
                 <div class="article-category">
-                    <img class="article-category-icon" v-bind:src="category_icon_src" />
-                    <span class="article-category-text">{{ article.category }}</span>
+                    <span class="article-category-icon"><i class="fa fa-book"></i></span>
+                    <TagCloud class="article-tags-cloud" :tags="[ article.category ]" />
                 </div>
-                <ul class="article-tags">
-                    <img class="article-tag-icon" v-bind:src="tag_icon_src" />
-                    <li class="article-tag" v-for="(tag, index) in article.tags" v-bind:key="index">{{ tag }}</li>
-                </ul>
+                <div class="article-tags">
+                    <span class="article-tags-icon"><i class="fa fa-tags"></i></span>
+                    <TagCloud class="article-tags-cloud" :tags="article.tags" />
+                </div>
             </div>
         </li>
     </ul>
 </template>
 
 <script>
-    import date_icon_src from '@assets/icon/date.png'
-    import category_icon_src from '@assets/icon/category.png'
-    import tag_icon_src from '@assets/icon/tag.png'
-
+    import TagCloud from '@components/TagCloud.vue'
     export default {
         name: 'ArticleList',
+        components: {
+            TagCloud
+        },
         data () {
             return {
-                date_icon_src: date_icon_src,
-                category_icon_src: category_icon_src,
-                tag_icon_src: tag_icon_src,
                 article_list: [
                     {
                         title: '文章标题',
-                        date: '2018年8月15日',
+                        date: '2018-08-15',
                         introduction: '文章内容文章内容文章内容文章内容文章内容文章内容',
                         category: '前端',
                         tags: [
@@ -57,7 +54,7 @@
                     },
                     {
                         title: '文章标题',
-                        date: '2018年8月15日',
+                        date: '2018-08-15',
                         introduction: '文章内容文章内容文章内容文章内容文章内容文章内容',
                         category: '前端',
                         tags: [
@@ -68,7 +65,7 @@
                     },
                     {
                         title: '文章标题',
-                        date: '2018年8月15日',
+                        date: '2018-08-15',
                         introduction: '文章内容文章内容文章内容文章内容文章内容文章内容',
                         category: '前端',
                         tags: [
@@ -79,7 +76,7 @@
                     },
                     {
                         title: '文章标题',
-                        date: '2018年8月15日',
+                        date: '2018-08-15',
                         introduction: '文章内容文章内容文章内容文章内容文章内容文章内容',
                         category: '前端',
                         tags: [
@@ -90,7 +87,7 @@
                     },
                     {
                         title: '文章标题',
-                        date: '2018年8月15日',
+                        date: '2018-08-15',
                         introduction: '文章内容文章内容文章内容文章内容文章内容文章内容',
                         category: '前端',
                         tags: [
@@ -101,7 +98,7 @@
                     },
                     {
                         title: '文章标题',
-                        date: '2018年8月15日',
+                        date: '2018-08-15',
                         introduction: '文章内容文章内容文章内容文章内容文章内容文章内容',
                         category: '前端',
                         tags: [

@@ -11,30 +11,14 @@
                 <li class="aside-text-feature">一个无聊的人的小站</li>
             </ul>
             <ul class="aside-menu">
-                <li>
-                    <a title="首页"><i class="fa fa-home"></i></a>
-                </li>
-                <li>
-                    <a><i class="fa fa-home"></i></a>
-                </li>
-                <li>
-                    <a><i class="fa fa-tags"></i></a>
-                </li>
-                <li>
-                    <a><i class="fa fa-photo"></i></a>
-                </li>
-                <li>
-                    <a title="首页"><i class="fa fa-home"></i></a>
-                </li>
-                <li>
-                    <a><i class="fa fa-home"></i></a>
-                </li>
-                <li>
-                    <a><i class="fa fa-tags"></i></a>
-                </li>
-                <li>
-                    <a><i class="fa fa-photo"></i></a>
-                </li>
+                <li><a title="首页"><i class="fa fa-home"></i></a></li>
+                <li><a><i class="fa fa-archive"></i></a></li>
+                <li><a><i class="fa fa-tags"></i></a></li>
+                <li><a><i class="fa fa-photo"></i></a></li>
+                <li><a><i class="fa fa-home"></i></a></li>
+                <li><a><i class="fa fa-home"></i></a></li>
+                <li><a><i class="fa fa-tags"></i></a></li>
+                <li><a><i class="fa fa-photo"></i></a></li>
             </ul>
         </div>
     </div>

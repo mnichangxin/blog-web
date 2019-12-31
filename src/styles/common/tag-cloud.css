@@ -1,0 +1,76 @@
+/* tag clouds */
+.tag-cloud-item {
+    display: inline-block;
+}
+.tag-cloud-des {
+    display: inline-block;
+    position: relative;
+    margin: 0 8px;
+    padding: 3px 10px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #ffffff;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    opacity: .75;
+    cursor: pointer;
+}
+.tag-cloud-des-0 {
+    background-color: #4580da;
+}
+.tag-cloud-des-1 {
+    background-color: #ffa07a;
+}
+.tag-cloud-des-2 {
+    background-color: #dd56b0;
+}
+.tag-cloud-des-3 {
+    background-color: #c5831f;
+}
+.tag-cloud-des-4 {
+    background-color: #e24c11;
+}
+.tag-cloud-des:hover {
+    transform: scale(1.02);
+    background-color: #99cc99;
+    opacity: 1; 
+}
+.tag-cloud-des::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+}
+.tag-cloud-des-0::before {
+    border-right-color: #4580da; 
+}
+.tag-cloud-des-1::before {
+    border-right-color: #ffa07a; 
+}
+.tag-cloud-des-2::before {
+    border-right-color: #dd56b0; 
+}
+.tag-cloud-des-3::before {
+    border-right-color: #c5831f; 
+}
+.tag-cloud-des-4::before {
+    border-right-color: #e24c11; 
+}
+.tag-cloud-des:hover::before {
+    border-right-color: #99cc99; 
+}
+.tag-cloud-des::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .3);
+}

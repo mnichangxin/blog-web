@@ -41,19 +41,22 @@
 }
 .article-date {
     float: right;
+    font-size: 13px;
+    font-weight: 800;
+    color: #aaaaaa;
 }
-.article-date-icon, .article-category-icon, .article-tag-icon {
+.article-date-icon, .article-category-icon, .article-tags-icon {
     width: 20px;
     height: 20px;
     vertical-align: middle;
+    color: #aaaaaa;
 }
-.article-date-text, .article-category-text {
+.article-date-text, .article-tags-cloud {
     display: inline-block;
-    font-size: 14px;
     vertical-align: middle;
 }
-.article-date-text {
-    color: #5fbcee;
+.article-category-icon {
+    font-size: 17px;
 }
 .article-introduction {
     padding: 20px 20px 0;
@@ -71,29 +74,6 @@
 .article-category, .article-tags {
     float: left;
 }
-.article-category-text {
-    margin-left: 5px;
-    padding: 5px;
-    background-color: #5fbcee;
-    color: #ffffff;
-    cursor: pointer;
-}
-.article-category-text:hover {
-    background-color: #1296db;
-}
 .article-tags {
-    margin-left: 20px;
-}
-.article-tag {
-    display: inline-block;
-    margin-left: 5px;
-    padding: 5px;
-    background-color: #d15c4d;
-    color: #ffffff;
-    font-size: 14px;
-    vertical-align: middle;
-    cursor: pointer;
-}
-.article-tag:hover {
-    background-color: #d81e06;
+    margin-left: 15px;
 }
