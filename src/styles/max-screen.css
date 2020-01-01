@@ -9,7 +9,6 @@
  @import url('article/article.css');
  @import url('footer/footer.css');
 
-/* html, body */
 html, body {
     height: 100%;
     background-color: #e0e0e0;
@@ -17,7 +16,16 @@ html, body {
     background-size: cover;
     background-attachment: fixed;
 }
-/* container */
+body {
+    font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", 
+                Arial, Verdana, "Helvetica Neue", Helvetica, Tahoma, Georgia, 
+                "Nimbus Roman No9 L", "Songti SC", "Courier New", Times, 
+                Georgia, Georgia, "Nimbus Roman No9 L", "Songti SC", 
+                STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, 
+                SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", 
+                "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", 
+                PMingLiU, MingLiU, sans-serif;
+}
 .container {
     position: relative;
     padding-left: 310px;
