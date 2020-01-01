@@ -26,6 +26,10 @@
                     <span class="article-tags-icon"><i class="fa fa-tags"></i></span>
                     <TagCloud class="article-tags-cloud" :tags="article.tags" />
                 </div>
+                <div class="article-detail">
+                    <span>阅读全文</span>
+                    <span>&gt;&gt;</span>
+                </div>
             </div>
         </li>
     </ul>

@@ -58,6 +58,9 @@
 .article-category-icon {
     font-size: 17px;
 }
+.article-tags-cloud {
+    margin-left: 3px;
+}
 .article-introduction {
     padding: 20px 20px 0;
 }
@@ -76,4 +79,17 @@
 }
 .article-tags {
     margin-left: 15px;
+}
+.article-detail {
+    float: right;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 2px;
+    background: #00bbff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.article-detail:hover {
+    background: #99cc99;
 }
