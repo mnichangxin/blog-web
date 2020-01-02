@@ -21,6 +21,10 @@
     export default {
         name: 'Pagination',
         props: {
+            total: {
+                type: Number,
+                default: 0
+            },
             currentPage: {
                 type: Number,
                 default: 1
@@ -39,6 +43,12 @@
                     return (value | 0) === value && value > 4 && value < 22 && (value % 2) === 1
                 },
                 default: 7
+            }
+        },
+        data () {
+            return {
+                internalCurrentPage: 1,
+                internalPageSize: 0
             }
         },
         computed: {
@@ -83,8 +93,8 @@
                     }
                 }
 
-                this.showPrevMore = showPrevMore
-                this.showNextMore = showNextMore
+                // this.showPrevMore = showPrevMore
+                // this.showNextMore = showNextMore
 
                 return array
             }
@@ -97,6 +107,7 @@
     }
     .pagination li {
         display: inline-block;
+        vertical-align: middle;
     }
     .pagination li a {
         cursor: pointer;
