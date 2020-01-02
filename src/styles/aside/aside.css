@@ -6,8 +6,7 @@
     width: 310px;
     height: 100%;
     box-shadow: 3px 2px 8px #1b1b1b;
-    background-color: #ffffff;
-    opacity: .85;
+    background-color: rgba(255, 255, 255, .85);
 }
 @keyframes rotation {
     from {
