@@ -1,7 +1,7 @@
 <template>
     <div class="article-container">
         <ArticleList />
-        <Pagination class="pagination" />
+        <Pagination :total="50" :currentPage="3" class="pagination" />
         <Footer />
     </div>
 </template>
