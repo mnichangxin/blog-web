@@ -1,21 +1,19 @@
 <template>
     <ul class="pagination">
-        <li class="pagination-prev" v-show="internalCurrentPage != 1"><a>« Prev</a></li>
+        <li class="pagination-prev" v-show="internalCurrentPage != 1"><a @click="prev">« Prev</a></li>
         <li class="pagination-pager">
-            <ul>
-                <template v-for="(pager, index) in pagers">
-                    <li class="pagination-pager-number"
-                        :class="pager.value == internalCurrentPage && 'pagination-pager-number-active'"
-                        :key="index"
-                        v-if="pager.type === 'number' || pager.type === 'more' && (pager.showPrevMore || pager.showNextMore)"><a>{{ pager.value }}</a></li>
-                </template>
-            </ul>
+            <Pager
+                :currentPage="internalCurrentPage"
+                :pageCount="internalPageCount"
+                :pagerCount="pagerCount"
+                @pager-change="pagerChange" />
         </li>
-        <li class="pagination-next" v-show="internalCurrentPage != internalPageCount"><a>Next »</a></li>
+        <li class="pagination-next" v-show="internalCurrentPage != internalPageCount"><a @click="next">Next »</a></li>
     </ul>
 </template>
 
 <script>
+    import Pager from './Pager.vue'
     export default {
         name: 'Pagination',
         props: {
@@ -43,6 +41,9 @@
                 internalPageSize: 1
             }
         },
+        components: {
+            Pager
+        },
         methods: {
             getValidCurrentPage (value) {
                 value = parseInt(value, 10)
@@ -55,6 +56,25 @@
                     }
                 }
                 return resetValue
+            },
+            prev () {
+                const newVal = this.internalCurrentPage -= 1
+                this.$emit('prev-click', this.getValidCurrentPage(newVal))
+                this.emitChange()
+            },
+            next () {
+                const newVal = this.internalCurrentPage += 1
+                this.$emit('next-click', this.getValidCurrentPage(newVal))
+                this.emitChange()
+            },
+            pagerChange (value) {
+                this.internalCurrentPage = this.getValidCurrentPage(value)
+                this.emitChange()
+            },
+            emitChange () {
+                this.$nextTick(() => {
+                    this.$emit('current-change', this.internalCurrentPage)
+                })
             }
         },
         computed: {
@@ -65,66 +85,6 @@
                     return Math.max(1, this.pageCount)
                 }
                 return 1
-            },
-            pagers () {
-                const currentPage = Number(this.currentPage)
-                const pageCount = Number(this.internalPageCount)
-
-                const pagerCount = Number(this.pagerCount)
-                const halfPagerCount = (pagerCount - 1) / 2
-
-                let showPrevMore = false
-                let showNextMore = false
-
-                if (pageCount > pagerCount) {
-                    if (currentPage > pagerCount - halfPagerCount) {
-                        showPrevMore = true
-                    }
-                    if (currentPage < pageCount - halfPagerCount) {
-                        showNextMore = true
-                    }
-                }
-
-                let array = []
-
-                if (showPrevMore && !showNextMore) {
-                    const startPage = pageCount - (pagerCount - 2)
-                    for (let i = startPage; i < pageCount; i++) {
-                        array.push({ value: i })
-                    }
-                } else if (!showPrevMore && showNextMore) {
-                    for (let i = 2; i < pagerCount; i++) {
-                        array.push({ value: i })
-                    }
-                } else if (showPrevMore && showNextMore) {
-                    const offset = Math.floor(pagerCount / 2) - 1
-                    for (let i = currentPage - offset; i <= currentPage + offset; i++) {
-                        array.push({ value: i })
-                    }
-                } else {
-                    for (let i = 2; i < pageCount; i++) {
-                        array.push({ value: i })
-                    }
-                }
-
-                array = array.map(_ => ({ type: 'number', value: _.value }))
-                array = [{
-                    type: 'number',
-                    value: 1
-                }, {
-                    type: 'more',
-                    showPrevMore: showPrevMore,
-                    value: '...'
-                }, ...array, {
-                    type: 'more',
-                    showNextMore: showNextMore,
-                    value: '...'
-                }, {
-                    type: 'number',
-                    value: pageCount
-                }]
-
-                return array
             }
         },
         watch: {
@@ -143,44 +103,3 @@
         }
     }
 </script>
-
-<style>
-    .pagination {
-        text-align: center;
-    }
-    .pagination li {
-        display: inline-block;
-        vertical-align: middle;
-    }
-    .pagination li a {
-        cursor: pointer;
-    }
-    .pagination-prev, .pagination-next {
-        margin: 0 10px;
-    }
-    .pagination-prev a, .pagination-next a {
-        font-size: 16px;
-    }
-    .pagination-prev a:hover, .pagination-next a:hover {
-        color: #ffffff;
-    }
-    .pagination-pager-number {
-        margin: 0 2px;
-    }
-    .pagination-pager-number a {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        font-size: 13px;
-        text-align: center;
-        vertical-align: middle;
-        border-radius: 50%;
-        color: #ffffff;
-        background: #4d4d4d;
-    }
-    .pagination-pager-number a:hover, .pagination-pager-number-active a {
-        color: #4d4d4d;
-        background: #ffffff;
-    }
-</style>

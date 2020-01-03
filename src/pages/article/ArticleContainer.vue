@@ -1,7 +1,11 @@
 <template>
     <div class="article-container">
         <ArticleList />
-        <Pagination :total="50" :currentPage="3" class="pagination" />
+        <Pagination
+            class="pagination"
+            :total="100"
+            :currentPage="3"
+            @prev-click="onPrevClick" />
         <Footer />
     </div>
 </template>
@@ -17,6 +21,11 @@
             Pagination,
             ArticleList,
             Footer
+        },
+        methods: {
+            onPrevClick (curPage) {
+                console.log(curPage)
+            }
         }
     }
 </script>
