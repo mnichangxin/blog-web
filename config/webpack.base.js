@@ -19,6 +19,7 @@ module.exports = {
             '@components': resolve('../src/components'),
             '@pages': resolve('../src/pages'),
             '@styles': resolve('../src/styles'),
+            '@router': resolve('../src/router'),
             '@assets': resolve('../src/assets')
         }
     },
