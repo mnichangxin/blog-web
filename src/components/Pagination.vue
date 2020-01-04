@@ -52,7 +52,7 @@
                     if (value > 1 && value <= this.internalPageCount) {
                         resetValue = value
                     } else if (value > this.internalCurrentPage) {
-                        resetValue = this.internalCurrentPage
+                        resetValue = this.internalPageCount
                     }
                 }
                 return resetValue
