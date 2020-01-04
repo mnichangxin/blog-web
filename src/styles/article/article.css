@@ -1,11 +1,4 @@
 /* article */
-.article-container {
-    position: relative;
-    padding: 30px;
-    min-height: 100%;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, .85);
-}
 .article-list {
     padding-bottom: 30px;
 }

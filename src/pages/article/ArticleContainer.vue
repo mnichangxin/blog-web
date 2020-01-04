@@ -1,26 +1,27 @@
 <template>
-    <div class="article-container">
-        <ArticleList />
-        <Pagination
-            class="pagination"
-            :total="100"
-            :currentPage="3"
-            @prev-click="onPrevClick" />
-        <Footer />
-    </div>
+    <Body>
+        <div class="article-container">
+            <ArticleList />
+            <Pagination
+                class="pagination"
+                :total="50"
+                :currentPage="1"
+                @prev-click="onPrevClick" />
+        </div>
+    </Body>
 </template>
 
 <script>
     import Pagination from '@components/Pagination.vue'
+    import Body from '@pages/body/body.vue'
     import ArticleList from '@pages/article/ArticleList.vue'
-    import Footer from '@pages/footer/Footer.vue'
 
     export default {
         name: 'ArticleContainer',
         components: {
             Pagination,
-            ArticleList,
-            Footer
+            Body,
+            ArticleList
         },
         methods: {
             onPrevClick (curPage) {
