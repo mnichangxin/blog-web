@@ -24,7 +24,7 @@
                 const pagerCountOffset = this.pagerCount - 2
                 let nextPage = value
                 if (type === 'more') {
-                    pager.showPrevMore ? nextPage = currentPage - pagerCountOffset : nextPage = currentPage + pagerCountOffset
+                    nextPage = pager.showPrevMore ? currentPage - pagerCountOffset : currentPage + pagerCountOffset
                 }
                 this.$emit('pager-change', nextPage)
             }
