@@ -20,14 +20,13 @@
                     <TagCloud class="article-archive-tags-cloud" :tags="[ '标签1', '标签2', '标签3' ]" />
                 </div>
             </div>
-            <div class="article-main">
-                <span>文章内容</span>
-            </div>
+            <div class="article-main" v-html="articleContent"></div>
         </div>
     </Body>
 </template>
 
 <script>
+    import marked from 'marked'
     import Body from '@pages/body/body.vue'
     import TagCloud from '@components/TagCloud.vue'
 
@@ -36,6 +35,15 @@
         components: {
             Body,
             TagCloud
+        },
+        data () {
+            return {
+                articleContent: ''
+            }
+        },
+        created () {
+            const str = '# blog-web'
+            this.articleContent = marked(str)
         }
     }
 </script>
