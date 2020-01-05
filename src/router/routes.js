@@ -1,6 +1,9 @@
-import App from '@pages/App.vue'
+import ArticleList from '@pages/article/ArticleList.vue'
 
 export default [{
     path: '/',
-    component: App
+    component: ArticleList
+}, {
+    path: '/articleList',
+    component: ArticleList
 }]

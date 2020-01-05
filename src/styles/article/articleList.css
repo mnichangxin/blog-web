@@ -1,79 +1,79 @@
-/* article */
+/* article-list */
 .article-list {
     padding-bottom: 30px;
 }
-.article {
+.article-list-item {
     margin-top: 25px;
     box-shadow: 0 0 5px #cecece;
 }
-.article:hover {
+.article-list-item:hover {
     box-shadow: 0 0 10px #b3b3b3;
 }
-.article:first-child {
+.article-list-item:first-child {
     margin-top: 0;
 }
-.article-top {
+.article-list-item-top {
     padding: 20px;
     overflow: hidden;
 }
-.article-top:hover {
+.article-list-item-top:hover {
     border-left: 5px solid #444444;
 }
-.article-title {
+.article-list-item-title {
     float: left;
     font-size: 22px;
     color: #000000;
     cursor: pointer;
 }
-.article-title:hover {
+.article-list-item-title:hover {
     color: #8b7e7e;
     transition: color .3s;
 }
-.article-date {
+.article-list-item-date {
     float: right;
     font-size: 13px;
     font-weight: 800;
     color: #aaaaaa;
 }
-.article-date-icon, .article-category-icon, .article-tags-icon {
+.article-list-item-date-icon, .article-list-item-category-icon, .article-list-item-tags-icon {
     width: 20px;
     height: 20px;
     vertical-align: middle;
     color: #aaaaaa;
 }
-.article-date-text, .article-tags-cloud {
+.article-list-item-date-text, .article-list-item-tags-cloud {
     display: inline-block;
     vertical-align: middle;
 }
-.article-category-icon {
+.article-list-item-category-icon {
     font-size: 17px;
 }
-.article-tags-cloud {
+.article-list-item-tags-cloud {
     margin-left: 3px;
 }
-.article-introduction {
+.article-list-item-introduction {
     padding: 20px 20px 0;
 }
-.article-introduction-text {
+.article-list-item-introduction-text {
     font-size: 16px;
 }
-.article-introduction-split {
+.article-list-item-introduction-split {
     margin-top: 20px;
     display: block;
     border-radius: 50%;
     border-top: 1px solid #d3d3d3;
 }
-.article-bottom {
+.article-list-item-bottom {
     padding: 20px;
     overflow: hidden;
 }
-.article-category, .article-tags {
+.article-list-item-category, .article-list-item-tags {
     float: left;
 }
-.article-tags {
+.article-list-item-tags {
     margin-left: 15px;
 }
-.article-detail {
+.article-list-item-detail {
     float: right;
     padding: 4px;
     font-size: 12px;
@@ -83,6 +83,6 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-.article-detail:hover {
+.article-list-item-detail:hover {
     background: #99cc99;
 }
