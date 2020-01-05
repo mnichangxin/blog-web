@@ -1,0 +1,79 @@
+/** article */
+.article {
+    padding-bottom: 30px;
+    box-shadow: 0 0 5px #cecece;
+}
+.article-nav {
+    padding: 20px;
+    overflow: hidden;
+}
+.article-nav:hover {
+    border-left: 5px solid #444444;
+}
+.article-nav-title {
+    float: left;
+    font-size: 22px;
+    color: #000000;
+    cursor: pointer;
+}
+.article-nav-title:hover {
+    color: #8b7e7e;
+    transition: color .3s;
+}
+.article-nav-date {
+    float: right;
+    font-size: 13px;
+    font-weight: 800;
+    color: #aaaaaa;
+}
+.article-nav-date-icon, .article-archive-category-icon, .article-archive-tags-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    color: #aaaaaa;
+}
+.article-nav-date-text, .article-archive-tags-cloud {
+    display: inline-block;
+    vertical-align: middle;
+}
+.article-archive {
+    padding: 5px 20px;
+    overflow: hidden;
+}
+.article-archive-category, .article-archive-tags {
+    float: left;
+}
+.article-archive-category-icon {
+    font-size: 17px;
+}
+.article-archive-tags-cloud {
+    margin-left: 3px;
+}
+.article-archive-tags {
+    margin-left: 15px;
+}
+.article-archive-detail {
+    float: right;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 2px;
+    background: #00bbff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.article-archive-detail:hover {
+    background: #99cc99;
+}
+.article-main {
+    padding: 20px 20px 0;
+}
+.article-list-item-introduction-text {
+    font-size: 16px;
+}
+.article-list-item-introduction-split {
+    margin-top: 20px;
+    display: block;
+    border-radius: 50%;
+    border-top: 1px solid #d3d3d3;
+}

@@ -2,7 +2,7 @@
     <li class="article-list-item">
         <div class="article-list-item-top">
             <div class="article-list-item-title">
-                <a>{{ articleListItemData.title }}</a>
+                <router-link to="/article">{{ articleListItemData.title }}</router-link>
             </div>
             <div class="article-list-item-date">
                 <span class="article-list-item-date-icon"><i class="fa fa-calendar"></i></span>
@@ -22,10 +22,10 @@
                 <span class="article-list-item-tags-icon"><i class="fa fa-tags"></i></span>
                 <TagCloud class="article-list-item-tags-cloud" :tags="articleListItemData.tags" />
             </div>
-            <div class="article-list-item-detail">
+            <router-link to="/article" class="article-list-item-detail">
                 <span>阅读全文</span>
                 <span>&gt;&gt;</span>
-            </div>
+            </router-link>
         </div>
     </li>
 </template>
