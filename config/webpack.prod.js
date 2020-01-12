@@ -15,7 +15,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = merge(base, {
     mode: 'production',
     output: {
-        publicPath: 'www.lichangxin.net/static/', // Online static directory
+        publicPath: 'http://lichangxin.xyz/static/', // Online static directory
         filename: '[name].[hash].js',
         chunkFilename: '[name].[chunkhash].js',
     },
