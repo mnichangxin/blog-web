@@ -3,8 +3,8 @@
         <div class="archive">
             <ul class="archive-list">
                 <li v-for="(archiveItem, index) in archiveListData" :key="index">
-                    <div>{{ archiveItem.date }}</div>
-                    <ul></ul>
+                    <div class="archive-date">{{ archiveItem.date }}</div>
+                    <ul class="archive-item-list"></ul>
                 </li>
             </ul>
         </div>
