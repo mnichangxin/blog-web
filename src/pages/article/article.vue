@@ -27,7 +27,7 @@
 
 <script>
     import marked from 'marked'
-    import Body from '@pages/body/body.vue'
+    import Body from '@pages/body/Body.vue'
     import TagCloud from '@components/TagCloud.vue'
 
     export default {

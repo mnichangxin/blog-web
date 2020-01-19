@@ -17,7 +17,7 @@
 
 <script>
     import Pagination from '@components/Pagination.vue'
-    import Body from '@pages/body/body.vue'
+    import Body from '@pages/body/Body.vue'
     import ArticleListItem from '@pages/articleList/ArticleListItem.vue'
 
     export default {

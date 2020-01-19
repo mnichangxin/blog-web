@@ -1,5 +1,5 @@
 import ArticleList from '@pages/articleList/ArticleList.vue'
-import Article from '@pages/article/article.vue'
+import Article from '@pages/article/Article.vue'
 
 export default [
     {
