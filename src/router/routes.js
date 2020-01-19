@@ -1,5 +1,6 @@
 import ArticleList from '@pages/articleList/ArticleList.vue'
 import Article from '@pages/article/Article.vue'
+import Archive from '@pages/archive/Archive.vue'
 
 export default [
     {
@@ -13,5 +14,9 @@ export default [
     {
         path: '/article',
         component: Article
+    },
+    {
+        path: '/archive',
+        component: Archive
     }
 ]
