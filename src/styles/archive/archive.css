@@ -1,0 +1,69 @@
+/** archive */
+.archive {
+    padding: 10px 0;
+    box-shadow: 0 0 5px #cecece;
+}
+.archive-data-item {
+   padding: 20px 0 0;
+   overflow: hidden;         
+}
+.archive-date, .archive-list {
+    float: left;
+}
+.archive-date {
+    width: 150px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #666666;
+}
+.archive-list {
+    padding: 0 35px 0 0;
+    width: calc(100% - 150px);
+    box-sizing: border-box;
+}
+.archive-list .archive-item {
+    padding: 15px 10px 15px 0;
+    border-bottom: 1px solid #ffffff;
+}
+.archive-list .archive-item:first-child {
+    padding-top: 0;
+}
+.archive-list .archive-item:last-child {
+    border-bottom: none;
+}
+.archive-item-date-icon, .archive-item-category-icon, .archive-item-tags-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    color: #aaaaaa;
+}
+.archive-item-top {
+    overflow: hidden;
+}
+.archive-item-title {
+    float: left;
+}
+.archive-item-title a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333; 
+}
+.archive-item-title a:hover {
+    color: #8a9185;
+    transition: color .3s;
+}
+.archive-item-date {
+    float: right;
+    color: #aaaaaa;
+}
+.archive-item-bottom {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.archive-item-category, .archive-item-tags {
+    float: left;
+}
+.archive-item-tags-cloud {
+    display: inline-block;
+}
