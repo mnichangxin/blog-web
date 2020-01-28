@@ -1,0 +1,21 @@
+/** category  */
+.category {
+    padding: 0 20px;
+    box-shadow: 0 0 5px #cecece;
+}
+.category-header {
+    padding: 26px 0;
+    border-bottom: 1px solid #ffffff;
+    text-align: center;
+}
+.category-header-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+.category-header-title:hover {
+    color: #c4b37c;
+    transition: color .3s;
+}
+.category-body {
+    padding: 30px 0;
+}

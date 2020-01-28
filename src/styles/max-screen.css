@@ -4,14 +4,14 @@
  * adapt big screen
  */
 
- @import url('components/index.css');
- @import url('aside/aside.css');
- @import url('body/body.css');
- @import url('footer/footer.css');
- @import url('articleList/articleList.css');
- @import url('archive/archive.css');
- @import url('article/article.css');
-
+@import url('components/index.css');
+@import url('aside/aside.css');
+@import url('body/body.css');
+@import url('footer/footer.css');
+@import url('articleList/articleList.css');
+@import url('archive/archive.css');
+@import url('article/article.css');
+@import url('category/category.css');
 
 html, body {
     height: 100%;
